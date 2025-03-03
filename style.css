@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
@@ -32,16 +32,64 @@ body::before {
 }
 
 header {
-   
-    background: #C5C2C2;
-    /* background: linear-gradient(to right, #6a11cb, #2575fc);*/
-    color: white;
-    padding: 40px;
-    animation: fadeIn 1.5s;
+    background-color: #E3E3E3;  /* Light grey background */
+    color: black;
+    border-radius: 25px;  /* Rounded corners */
+    padding: 10px 20px;
+    width: 80%;  /* Adjustable width */
+    max-width: 1200px;  /* Prevents stretching too much */
+    margin: auto;
+    position:relative;
+    top:30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+nav a.active {
+    color: #49C5B6;  /* Light blue highlight */
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: #49C5B6;
 }
 
 h2 {
-    color: #6a11cb;
+    color: white;
 }
 
 section {
