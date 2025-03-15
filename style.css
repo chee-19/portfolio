@@ -3,9 +3,10 @@ body {
     text-align: left;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-color: #454343;
     color: white;
     position: relative;
+    font-size: 25px;
 }
 
 /* Grid background effect */
@@ -17,8 +18,8 @@ body::before {
     width: 100%;
     height: 100%;
     background-size: 40px 40px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(78, 78, 78, 1) 3px, transparent 1px),
+                      linear-gradient(90deg, rgba(78, 78, 78, 1) 3px, transparent 1px);
     z-index: -1;
 }
 
@@ -137,4 +138,30 @@ a:hover {
 @keyframes slideUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+.highlight-txt{
+    color: #A2FCFF;
+}
+
+#about{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#about div{
+    flex: 1;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+#about img {
+    flex:1;
+    min-width: none;
+    max-width: 400px;
+    padding-right: 50px;
 }
