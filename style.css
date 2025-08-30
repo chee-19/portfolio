@@ -1,0 +1,22 @@
+button{color: white;
+font-weight: bold;
+background-color: blue;}
+
+.practice-container{
+    display: flex; /*This activates the flex box*/
+    background: red;
+    height: 100px;
+
+    justify-content: center; /*horizontal axis*/
+    align-items: center; /*vertical axis*/
+    flex-direction: column; /*stack items top -> bottm. basically like a column can be changed to row too.*/
+
+}
+
+.box{
+    background-color: aqua;
+    color: green;
+
+    padding: 10px;
+    margin: 10px;
+}
