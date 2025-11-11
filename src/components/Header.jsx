@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <header className="site-header">
-      {/* The centered container keeps the fixed header content aligned with the page width */}
+      {/* Flex container keeps logo on the left and navigation on the right */}
       <div className="nav-container">
         <button
           type="button"
@@ -68,27 +68,29 @@ const Header = () => {
             <span className="name">Ng Chee Wei</span>
           </span>
         </button>
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-label="Toggle navigation"
-          aria-controls="primary-navigation"
-          aria-expanded={isMenuOpen}
-          onClick={toggleMenu}
-        >
-          <span className="fa-solid fa-bars" aria-hidden="true"></span>
-        </button>
-        <nav
-          id="primary-navigation"
-          className={`nav-links ${isMenuOpen ? 'open' : ''}`}
-          aria-label="Primary navigation"
-        >
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeMenu}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <div className="nav-right">
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-controls="primary-navigation"
+            aria-expanded={isMenuOpen}
+            onClick={toggleMenu}
+          >
+            <span className="fa-solid fa-bars" aria-hidden="true"></span>
+          </button>
+          <nav
+            id="primary-navigation"
+            className={`nav-links ${isMenuOpen ? 'open' : ''}`}
+            aria-label="Primary navigation"
+          >
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );
