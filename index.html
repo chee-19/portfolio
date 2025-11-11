@@ -1,133 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chee Wei | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxC1uO/+4vYX0f4HnbR+8lbH5w4Z3rroWlvE1E8g6ZFyH3vA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header class="site-header">
-        <div class="nav-container">
-            <div class="logo" aria-label="Chee Wei home">
-                <span class="icon" aria-hidden="true">💡</span>
-                <span class="name">Chee Wei</span>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="fa-solid fa-bars" aria-hidden="true"></span>
-            </button>
-            <nav id="primary-navigation" class="nav-links" aria-label="Primary navigation">
-                <a href="#about">About me</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contacts</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="section-card hero">
-            <div class="hero-text">
-                <h1>Hello! 👋 I’m <span class="highlight-txt">Chee Wei</span></h1>
-                <p>A <span class="highlight-txt">Computer Engineering</span> student at Singapore Polytechnic. I am passionate about coding and building <span class="highlight-txt">innovative</span> projects that <span class="highlight-txt">solve</span> real-world problems through software and hardware <span class="highlight-txt">integration</span>.</p>
-                <p>Motivated and self-driven.</p>
-                <p>I thrive on <span class="highlight-txt">learning</span> new skills, constantly <span class="highlight-txt">challenging</span> myself to become a better problem <span class="highlight-txt">solver</span>.</p>
-                <p>Let’s connect and create something amazing together! 🚀</p>
-            </div>
-            <div class="hero-card" aria-labelledby="hero-card-heading">
-                <img src="face.png" alt="Portrait of Chee Wei" class="hero-avatar">
-                <div class="hero-name-card">
-                    <h2 id="hero-card-heading">Ng Chee Wei</h2>
-                    <p class="hero-name-secondary">黄志伟</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section-card">
-            <header class="section-header">
-                <h2><span class="fa-solid fa-code" aria-hidden="true"></span> Projects</h2>
-            </header>
-            <div class="projects-wrapper">
-                <article class="project-card">
-                    <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'><rect width='320' height='200' rx='24' fill='%2376e3c933'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' fill='%2376e3c9'>Preview</text></svg>" alt="Maintenance Checklist App preview" class="project-image">
-                        <div class="project-content">
-                            <h3>Maintenance Checklist App (Power Apps + SharePoint)</h3>
-                            <p>A streamlined inspection workflow that digitises data capture and reporting for facilities teams.</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="project-card">
-                    <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'><rect width='320' height='200' rx='24' fill='%2376e3c933'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' fill='%2376e3c9'>Preview</text></svg>" alt="Helpdesk Triage Assistant preview" class="project-image">
-                        <div class="project-content">
-                            <h3>Helpdesk Triage Assistant (React + Supabase + OpenAI)</h3>
-                            <p>An AI-assisted support dashboard that categorises and prioritises tickets to speed up resolutions.</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <section id="skills" class="section-card">
-            <header class="section-header">
-                <h2><span class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></span> Skills</h2>
-            </header>
-            <div class="skills-grid" role="list">
-                <span class="skill-chip" role="listitem">HTML</span>
-                <span class="skill-chip" role="listitem">CSS</span>
-                <span class="skill-chip" role="listitem">C++</span>
-                <span class="skill-chip" role="listitem">Python</span>
-                <span class="skill-chip" role="listitem">Git</span>
-                <span class="skill-chip" role="listitem">JavaScript</span>
-                <span class="skill-chip" role="listitem">Java</span>
-                <span class="skill-chip" role="listitem">MySQL</span>
-                <span class="skill-chip" role="listitem">AWS</span>
-                <span class="skill-chip" role="listitem">GitHub</span>
-                <span class="skill-chip" role="listitem">Docker</span>
-                <span class="skill-chip" role="listitem">Kubernetes</span>
-            </div>
-        </section>
-
-        <section id="contact" class="section-card socials">
-            <header class="section-header">
-                <h2>Socials</h2>
-            </header>
-            <div class="social-links">
-                <a class="social-pill" href="https://www.linkedin.com/in/ng-chee-wei-911730337" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a class="social-pill" href="mailto:your.email@example.com">Email</a>
-                <a class="social-pill" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </div>
-        </section>
-    </main>
-
-
-
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        const navAnchors = navLinks.querySelectorAll('a');
-
-        function closeMenu() {
-            navLinks.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-        }
-
-        menuToggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('open');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
-        });
-
-        navAnchors.forEach(anchor => {
-            anchor.addEventListener('click', closeMenu);
-        });
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                closeMenu();
-            }
-        });
-    </script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxC1uO/+4vYX0f4HnbR+8lbH5w4Z3rroWlvE1E8g6ZFyH3vA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
