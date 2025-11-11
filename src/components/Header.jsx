@@ -49,6 +49,7 @@ const Header = () => {
 
   return (
     <header className="site-header">
+      {/* The centered container keeps the fixed header content aligned with the page width */}
       <div className="nav-container">
         <div className="logo" aria-label="Chee Wei home">
           <span className="icon" aria-hidden="true">💡</span>
