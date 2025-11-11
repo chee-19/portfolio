@@ -53,7 +53,7 @@ const Header = () => {
       <div className="nav-container">
         <div className="logo" aria-label="Chee Wei home">
           <span className="icon" aria-hidden="true">💡</span>
-          <span className="name">Chee Wei</span>
+          <span className="name">Ng Chee Wei</span>
         </div>
         <button
           className="menu-toggle"
