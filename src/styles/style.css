@@ -87,6 +87,23 @@ body::before {
     position: relative;
 }
 
+.logo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.logo-button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
 .logo {
     display: inline-flex;
     align-items: center;

@@ -47,14 +47,27 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleScrollToTop = () => {
+    // Smoothly scroll the page back to the top/hero section when the logo is clicked
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="site-header">
       {/* The centered container keeps the fixed header content aligned with the page width */}
       <div className="nav-container">
-        <div className="logo" aria-label="Chee Wei home">
-          <span className="icon" aria-hidden="true">💡</span>
-          <span className="name">Ng Chee Wei</span>
-        </div>
+        <button
+          type="button"
+          className="logo-button"
+          onClick={handleScrollToTop}
+          aria-label="Scroll to top"
+        >
+          <span className="logo">
+            <span className="icon" aria-hidden="true">💡</span>
+            <span className="name">Ng Chee Wei</span>
+          </span>
+        </button>
         <button
           className="menu-toggle"
           type="button"
