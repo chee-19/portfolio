@@ -1,3 +1,16 @@
+:root {
+    --accent: #76e3c9;
+    --accent-soft: rgba(118, 227, 201, 0.18);
+    --panel-bg: rgba(21, 29, 33, 0.75);
+    --panel-border: rgba(118, 227, 201, 0.4);
+    --header-height: 80px;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,21 +21,40 @@ body {
     position: relative;
     font-size: 18px;
     line-height: 1.6;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root {
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 /* Preserve existing animated grid background */
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: 40px 40px;
     background-image: linear-gradient(rgba(78, 78, 78, 1) 3px, transparent 1px),
                       linear-gradient(90deg, rgba(78, 78, 78, 1) 3px, transparent 1px);
     z-index: -1;
     animation: moveGrid 5s linear infinite;
+    pointer-events: none;
 }
 
 @keyframes moveGrid {
@@ -30,32 +62,46 @@ body::before {
     to { background-position: 40px 40px; }
 }
 
-:root {
-    --accent: #76e3c9;
-    --accent-soft: rgba(118, 227, 201, 0.18);
-    --panel-bg: rgba(21, 29, 33, 0.75);
-    --panel-border: rgba(118, 227, 201, 0.4);
-}
-
+/* Fixed glassmorphism header that stays visible while scrolling */
 .site-header {
-    background-color: rgba(24, 32, 36, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(24, 32, 36, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(118, 227, 201, 0.35);
     color: #f7f9fb;
-    border-radius: 24px;
-    padding: 18px 24px;
-    width: min(92%, 1100px);
-    margin: 32px auto 24px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(8px);
-    position: relative;
+    padding: 16px 0;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: min(92%, 1100px);
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.logo-button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
 }
 
 .logo {
@@ -135,9 +181,11 @@ body::before {
 main {
     width: min(92%, 1100px);
     margin: 0 auto 80px;
+    padding-top: calc(var(--header-height) + 32px);
     display: flex;
     flex-direction: column;
     gap: 32px;
+    flex: 1;
 }
 
 .section-card {
@@ -194,8 +242,7 @@ main {
 .hero-avatar {
     width: min(220px, 80%);
     border-radius: 18px;
-    border: 3px solid rgba(118, 227, 201, 0.35);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    display: block;
 }
 
 .hero-name-card {
@@ -365,12 +412,12 @@ main {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
+    :root {
+        --header-height: 96px;
     }
 
-    .site-header {
-        padding: 16px 20px;
+    body {
+        font-size: 16px;
     }
 
     .menu-toggle {
@@ -379,7 +426,9 @@ main {
 
     .nav-links {
         position: absolute;
-        inset: 80px 4% auto;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
         display: none;
         flex-direction: column;
         background: rgba(12, 18, 20, 0.95);
