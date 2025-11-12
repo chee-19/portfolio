@@ -1,29 +1,35 @@
-import python from '../assets/skills/python.svg';
-import reactLogo from '../assets/skills/react.svg';
-import mongodb from '../assets/skills/mongodb.svg';
-import fastapi from '../assets/skills/fastapi.svg';
-import git from '../assets/skills/git.svg';
-import supabase from '../assets/skills/supabase.svg';
-import postgres from '../assets/skills/postgres.svg';
-import cloudinary from '../assets/skills/cloudinary.svg';
-import authjs from '../assets/skills/authjs.svg';
-import radix from '../assets/skills/radix.svg';
-import nextjs from '../assets/skills/nextjs.svg';
-import reactnative from '../assets/skills/reactnative.svg';
+import python from '../assets/skills/python.png';
+import aws from '../assets/skills/aws.png';
+import cplusplus from '../assets/skills/c++.png';
+import css from '../assets/skills/CSS.png';
+import git from '../assets/skills/git.png';
+import supabase from '../assets/skills/supabase.png';
+import docker from '../assets/skills/docker.png';
+import github from '../assets/skills/github.png';
+import html from '../assets/skills/HTML.png';
+import java from '../assets/skills/java.png';
+import react from '../assets/skills/react.png';
+import javascript from '../assets/skills/JavaScript.png';
+import kuber from '../assets/skills/kubernetes.png';
+import mysql from '../assets/skills/mysql.png';
+
+//import './Skills.css';
 
 const SKILLS = [
   { name: 'Python', icon: python },
-  { name: 'React', icon: reactLogo },
-  { name: 'MongoDB', icon: mongodb },
-  { name: 'FastAPI', icon: fastapi },
+  { name: 'React', icon: aws },
+  { name: 'C++', icon: cplusplus },
+  { name: 'CSS', icon: css },
   { name: 'Git', icon: git },
   { name: 'Supabase', icon: supabase },
-  { name: 'PostgreSQL', icon: postgres },
-  { name: 'Cloudinary', icon: cloudinary },
-  { name: 'Auth.js', icon: authjs },
-  { name: 'Radix UI', icon: radix },
-  { name: 'Next.js', icon: nextjs },
-  { name: 'React Native', icon: reactnative },
+  { name: 'Docker', icon: docker },
+  { name: 'GitHub', icon: github },
+  { name: 'HTML;', icon: html },
+  { name: 'Java', icon: java },
+  { name: 'React Native', icon: react},
+  { name: 'Javascript', icon: javascript },
+  { name: 'Kubernetes', icon: kuber },
+  { name: 'MySQL', icon: mysql },
 ];
 
 const Skills = () => {

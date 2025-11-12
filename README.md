@@ -1,3 +1,8 @@
+Start project:
+```
+npm run dev
+```
+
 Rebuild your project
 
 Run this in your terminal:
