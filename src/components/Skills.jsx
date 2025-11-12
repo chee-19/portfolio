@@ -13,7 +13,7 @@ import javascript from '../assets/skills/JavaScript.png';
 import kuber from '../assets/skills/kubernetes.png';
 import mysql from '../assets/skills/mysql.png';
 
-import './Skills.css';
+//import './Skills.css';
 
 const SKILLS = [
   { name: 'Python', icon: python },
