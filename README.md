@@ -25,3 +25,9 @@ Delete all old files
 Paste the new ones from dist
 
 Now your docs contains the latest version of your site.
+
+Animation not working?
+Test:
+```
+Settings → Accessibility → Visual effects → “Animation effects
+```
