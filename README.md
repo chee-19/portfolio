@@ -7,8 +7,9 @@ Rebuild your project
 
 Run this in your terminal:
 
+```
 npm run build
-
+```
 
 This regenerates the dist folder — it contains the new, updated version of your site.
 
