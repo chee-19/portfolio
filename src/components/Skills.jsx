@@ -24,7 +24,7 @@ const SKILLS = [
   { name: 'Supabase', icon: supabase },
   { name: 'Docker', icon: docker },
   { name: 'GitHub', icon: github },
-  { name: 'HTML;', icon: html },
+  { name: 'HTML', icon: html },
   { name: 'Java', icon: java },
   { name: 'React Native', icon: react},
   { name: 'Javascript', icon: javascript },
