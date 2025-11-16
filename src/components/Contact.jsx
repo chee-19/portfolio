@@ -6,12 +6,12 @@ const socialLinks = [
   },
   {
     label: 'Email',
-    href: 'mailto:your.email@example.com',
-    isExternal: false,
+    href: 'mailto:ngcheewei21@gmail.com',
+    isExternal: true,
   },
   {
-    label: 'Instagram',
-    href: '#',
+    label: 'Github',
+    href: 'https://github.com/chee-19',
     isExternal: true,
   },
 ];

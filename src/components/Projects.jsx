@@ -1,20 +1,23 @@
+import checklistapp from '../assets/projects/checklistapp.png';
+import ticketproject from '../assets/projects/ticketproject.png';
+
 const projects = [
   {
-    title: 'Maintenance Checklist App (Power Apps + SharePoint)',
+    title: 'Maintenance Checklist App',
     description:
-      'A streamlined inspection workflow that digitises data capture and reporting for facilities teams.',
+      'Built a scalable digital maintenance checklist system that replaced paper forms, reduced human error, centralized all records in SharePoint, and delivered insights via Power BI dashboards for trend analysis.',
     href: '#',
     image:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'><rect width='320' height='200' rx='24' fill='%2376e3c933'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' fill='%2376e3c9'>Preview</text></svg>",
+      checklistapp,
     alt: 'Maintenance Checklist App preview',
   },
   {
-    title: 'Helpdesk Triage Assistant (React + Supabase + OpenAI)',
+    title: 'Helpdesk Triage Assistant',
     description:
-      'An AI-assisted support dashboard that categorises and prioritises tickets to speed up resolutions.',
+      'Developed an AI-driven ticketing assistant that automates ticket categorization, routes issues instantly to the correct team, accelerates replies with AI suggestions, and delivers performance insights through analytics.',
     href: '#',
     image:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'><rect width='320' height='200' rx='24' fill='%2376e3c933'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' fill='%2376e3c9'>Preview</text></svg>",
+      ticketproject,
     alt: 'Helpdesk Triage Assistant preview',
   },
 ];
