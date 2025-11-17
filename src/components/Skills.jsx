@@ -17,7 +17,7 @@ import mysql from '../assets/skills/mysql.png';
 
 const SKILLS = [
   { name: 'Python', icon: python },
-  { name: 'React', icon: react },
+  { name: 'AWS', icon: aws },
   { name: 'C++', icon: cplusplus },
   { name: 'CSS', icon: css },
   { name: 'Git', icon: git },
