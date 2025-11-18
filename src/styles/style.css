@@ -337,15 +337,12 @@ main {
 .modal-backdrop {
     position: fixed;
     inset: 0;
-    width: 100vw;
-    height: 100vh;
     padding: clamp(16px, 4vw, 48px);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(4, 8, 10, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     z-index: 4000;
     animation: modalFade 250ms ease;
 }
@@ -717,4 +714,12 @@ main {
     .social-pill {
         width: 100%;
     }
+}
+#projects.section-card {
+    position: relative;
+    z-index: 10;
+}
+#skills.section-card {
+    position: relative;
+    z-index: 1;
 }

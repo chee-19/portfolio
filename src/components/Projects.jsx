@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import checklistapp from '../assets/projects/checklistapp.png';
 import ticketproject from '../assets/projects/ticketproject.png';
@@ -26,6 +26,10 @@ const projects = [
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
+
+  useEffect(() => {
+  document.body.classList.toggle("modal-open", !!activeProject);
+}, [activeProject]);
 
   const handleCardKeyDown = useCallback((event, project) => {
     if (event.key === 'Enter' || event.key === ' ') {
