@@ -1,6 +1,6 @@
 import python from '../assets/skills/python.png';
 import aws from '../assets/skills/aws.png';
-import cplusplus from '../assets/skills/c++.png';
+import cplusplus from '../assets/skills/C++.png';
 import css from '../assets/skills/CSS.png';
 import git from '../assets/skills/git.png';
 import supabase from '../assets/skills/supabase.png';
