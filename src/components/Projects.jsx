@@ -1,3 +1,5 @@
+import { useState, useCallback } from 'react';
+
 import checklistapp from '../assets/projects/checklistapp.png';
 import ticketproject from '../assets/projects/ticketproject.png';
 
@@ -23,6 +25,15 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [activeProject, setActiveProject] = useState(null);
+
+  const handleCardKeyDown = useCallback((event, project) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setActiveProject(project);
+    }
+  }, [setActiveProject]);
+
   return (
     <section id="projects" className="section-card">
       <header className="section-header">
@@ -33,16 +44,53 @@ const Projects = () => {
       <div className="projects-wrapper">
         {projects.map((project) => (
           <article className="project-card" key={project.title}>
-            <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">
+            <div
+              className="project-link"
+              role="button"
+              tabIndex={0}
+              onClick={() => setActiveProject(project)}
+              onKeyDown={(event) => handleCardKeyDown(event, project)}
+            >
               <img src={project.image} alt={project.alt} className="project-image" />
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
               </div>
-            </a>
+            </div>
           </article>
         ))}
       </div>
+
+      {activeProject && (
+        <div className="modal-backdrop" onClick={() => setActiveProject(null)}>
+          <div className="modal-card" onClick={(event) => event.stopPropagation()} role="dialog" aria-modal="true">
+            <button
+              className="modal-close"
+              type="button"
+              onClick={() => setActiveProject(null)}
+              aria-label="Close project details"
+            >
+              &times;
+            </button>
+            <img src={activeProject.image} alt={activeProject.alt} className="modal-image" />
+            <div className="modal-body">
+              <h3>{activeProject.title}</h3>
+              <p>{activeProject.description}</p>
+              <div className="modal-section">
+                <h4>Tools &amp; Technologies</h4>
+                <p>Details coming soon. Add the tech stack here.</p>
+              </div>
+              <div className="modal-section">
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Highlight the most impactful feature here.</li>
+                  <li>Use this space for another detail or metric.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
