@@ -77,7 +77,7 @@ const Header = () => {
             aria-expanded={isMenuOpen}
             onClick={toggleMenu}
           >
-            <span className="fa-solid fa-bars" aria-hidden="true"></span>
+            {isMenuOpen ? '✕' : '☰'}
           </button>
           <nav
             id="primary-navigation"
