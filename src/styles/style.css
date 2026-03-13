@@ -827,3 +827,21 @@ body.modal-open {
         display: none;
     }
 }
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(118, 227, 201, 0.12);
+  border: 1px solid rgba(118, 227, 201, 0.35);
+  color: #f7f9fb;
+  font-size: 0.9rem;
+  line-height: 1;
+}

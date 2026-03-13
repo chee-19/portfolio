@@ -25,6 +25,19 @@ const projects = [
       checklistapp,
     video: checklistVideo,
     alt: 'Maintenance Checklist App preview',
+    tools: [
+      'Power Apps',
+      'SharePoint Lists',
+      'Power BI',
+      'Power Automate'
+    ],
+    features: [
+      'Replaced paper-based maintenance checklists with a digital workflow',
+      'Stored and centralized records using SharePoint Lists',
+      'Reduced manual entry errors and improved data consistency',
+      'Displayed trends and insights through Power BI dashboards',
+      'Supported scalable checklist submission across multiple equipment types'
+    ]
   },
   {
     title: 'Fruit Classifier',
@@ -35,6 +48,20 @@ const projects = [
       DFBan,
     video: DFBanVideo,
     alt: 'Fruit Classifier preview',
+    tools: [
+      'Python',
+      'TensorFlow',
+      'Keras',
+      'NumPy',
+      'Matplotlib'
+
+    ],
+    features: [
+      'Trained a CNN model to classify banana, dragon fruit, and unknown fruit images',
+      'Implemented data augmentation to improve model generalisation',
+      'Built a preprocessing pipeline for dataset splitting and image normalization',
+      'Evaluated model performance using training and validation metrics'
+    ]
   },
   {
     title: 'WorkSafe Tag',
@@ -45,6 +72,23 @@ const projects = [
       worksafe,
     video: worksafeVideo,
     alt: 'WorkSafe Tag preview',
+    tools: [
+      'Arduino',
+      'ESP8266 (ESP-01)',
+      'ADXL345 Accelerometer',
+      'GPS Module',
+      'ThingSpeak',
+      'Embedded C',
+      'Android Studio'
+    ],
+    features: [
+      'Implemented fall detection using accelerometer motion data',
+      'Integrated GPS module to capture and transmit worker location',
+      'Developed SOS alert function for emergency assistance',
+      'Transmitted sensor data to cloud dashboard using IoT connectivity',
+      'Designed a wearable prototype for monitoring worker safety in real environments',
+      'Developed mobile application to get data from ThinkSpeak to alert supervisors if aa incident happens'
+    ]
   },
   {
     title: 'Ingredient-Based Recipe App',
@@ -55,6 +99,19 @@ const projects = [
       ingrRecipe,
     video: ingRecipeVideo,
     alt: 'WorkSafe Tag preview',
+    tools: [
+    'Mendix',
+    'Node-RED',
+    'SQL',
+    'OpenAI API'
+    ],
+    features: [
+      'Allows users to input available ingredients to generate recipe suggestions either via camera or images from gallery',
+      'Integrates AI to generate 3 to 5 recipes with preparation steps and calorie estimates',
+      'Uses Node-RED to orchestrate API calls and workflow automation',
+      'Stores ingredient data and generated recipes in a SQL database',
+      'Displays generated recipes in a user-friendly list interface'
+    ]
   },
   {
     title: 'Bubble Tea Dispenser',
@@ -65,6 +122,21 @@ const projects = [
       bubbleT,
     video: bubbleTVideo,
     alt: 'Bubble Tea preview',
+    tools: [
+    'C Programming',
+    'Embedded Systems',
+    'Stepper Motor Control',
+    'LCD Display (4-bit Interface)',
+    'Keypad Interface',
+    'GPIO Hardware Control'
+    ],
+    features: [
+      'Implemented keypad-based user interface for selecting drink options',
+      'Controlled ingredient mixing mechanism using a stepper motor',
+      'Displayed system status and instructions on a 4-bit LCD display',
+      'Developed embedded C logic to coordinate input, processing, and hardware output',
+      'Built an automated drink preparation workflow based on user selections'
+    ]
   },
   {
     title: 'Helpdesk Triage Assistant',
@@ -75,6 +147,19 @@ const projects = [
       ticketproject,
     video: ticketVideo,
     alt: 'Helpdesk Triage Assistant preview',
+    tools: [
+    'Bolt',
+    'n8n workflow',
+    'Gemini API',
+    'Supabase'
+    ],
+    features: [
+      'Automatically classifies helpdesk tickets based on issue descriptions',
+      'Routes tickets to the appropriate support category or team',
+      'Reduces manual triage workload for support staff',
+      'Processes user input using NLP techniques to extract intent',
+      'Improves response efficiency by prioritizing incoming support requests'
+    ]
   },  
   
 ];
@@ -196,13 +281,20 @@ const Projects = () => {
           <p>{activeProject.description}</p>
           <div className="modal-section">
             <h4>Tools &amp; Technologies</h4>
-            <p>Details coming soon. Add the tech stack here.</p>
+            <div className="tech-stack">
+              {activeProject.tools?.map((tool, index) => (
+                <span key={index} className="tech-badge">
+                  {tool}
+                </span>
+              ))}
+            </div>
           </div>
           <div className="modal-section">
             <h4>Key Features</h4>
             <ul>
-              <li>Highlight the most impactful feature here.</li>
-              <li>Use this space for another detail or metric.</li>
+              {activeProject.features?.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
             </ul>
           </div>
         </div>
