@@ -103,10 +103,12 @@ const projects = [
     'Mendix',
     'Node-RED',
     'SQL',
-    'OpenAI API'
+    'OpenAI API',
+    'CodeProjectAI'
     ],
     features: [
       'Allows users to input available ingredients to generate recipe suggestions either via camera or images from gallery',
+      'Used CodeProject AI to identify the different ingredients shown on the image',
       'Integrates AI to generate 3 to 5 recipes with preparation steps and calorie estimates',
       'Uses Node-RED to orchestrate API calls and workflow automation',
       'Stores ingredient data and generated recipes in a SQL database',
