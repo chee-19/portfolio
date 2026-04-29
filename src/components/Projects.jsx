@@ -13,6 +13,8 @@ import bubbleT from '../assets/projects/bubbletea.jpg';
 import bubbleTVideo from '../assets/projects/bubbleteaVideo.mp4';
 import ingrRecipe from '../assets/projects/foodgen.png';
 import ingRecipeVideo from '../assets/projects/foodgenVideo.mp4';
+import transApp from '../assets/projects/transApp.png';
+import transVideo from '../assets/projects/transVideo.mp4';
 import randomimage from '../assets/projects/Screenshot 2025-01-12 145204.png';
 
 const projects = [
@@ -37,6 +39,32 @@ const projects = [
       'Reduced manual entry errors and improved data consistency',
       'Displayed trends and insights through Power BI dashboards',
       'Supported scalable checklist submission across multiple equipment types'
+    ]
+  },
+  {
+    title: 'Smart Translation WebApp',
+    description:
+      'Smart Translation Web App is a simple, user-focused tool designed to help non-English speakers overcome language barriers. Inspired by my mother’s real work challenges, the app allows users to translate phrases using text or voice, while also supporting pronunciation learning and saved phrases for repeated use.',
+    href: '#',
+    image:
+      transApp,
+    video: transVideo,
+    alt: 'Fruit Classifier preview',
+    tools: [
+      'Argos Translate',
+      'Lingua',
+      'Whisper',
+      'React',
+      'Hugging Face Spaces',
+      'Netlify'
+
+    ],
+    features: [
+      'Users can input text or speak directly into the app for translation',
+      'Supports Chinese ↔ English translation',
+      'Frequently used translations can be saved and reused easily',
+      'Users can tap on individual words/phrases to hear pronunciation',
+      'Slow speed option to help users learn pronunciation more clearly'
     ]
   },
   {

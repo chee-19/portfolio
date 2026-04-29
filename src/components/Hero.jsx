@@ -1,4 +1,5 @@
 import faceImage from '../assets/face.png';
+import rockImage from '../assets/rockclimb.png';
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
         <p>Let’s connect and create something amazing together! 🚀</p>
       </div>
       <div className="hero-card" aria-labelledby="hero-card-heading">
-        <img src={faceImage} alt="Portrait of Chee Wei" className="hero-avatar" />
+        <img src={rockImage} alt="Portrait of Chee Wei" className="hero-avatar" />
         <div className="hero-name-card">
           <h2 id="hero-card-heading">Ng Chee Wei</h2>
           <p className="hero-name-secondary">黄志伟</p>
